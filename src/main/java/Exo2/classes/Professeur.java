@@ -4,7 +4,6 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("1")
 public class Professeur extends Personne{
     private String matiere;
 
@@ -28,9 +27,9 @@ public class Professeur extends Personne{
     public String toString() {
         return "Professeur{" +
                 "matiere='" + matiere + '\'' +
-                ", id=" + id +
-                ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
+                ", id=" + this.getId() +
+                ", nom='" + this.getNom() + '\'' +
+                ", prenom='" + this.getPrenom() + '\'' +
                 '}';
     }
 }

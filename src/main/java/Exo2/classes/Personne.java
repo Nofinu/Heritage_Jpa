@@ -4,14 +4,13 @@ import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="personne_type")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Personne {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected int id;
-    protected String nom;
-    protected String prenom;
+    private int id;
+    private String nom;
+    private String prenom;
 
     public Personne() {
     }
