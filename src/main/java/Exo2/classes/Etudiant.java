@@ -4,7 +4,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-public class Etudiant {
+public class Etudiant extends Personne{
     private String classe;
 
     public Etudiant(String nom, String prenom, String classe) {
